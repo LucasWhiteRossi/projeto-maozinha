@@ -48,7 +48,7 @@ export function Divulgacoes(){
                       <h5 class="card-title">{currentDivulgacao.titulo}</h5>
                       <h6 class="card-subtitle mb-2 text-muted">{currentDivulgacao.nome_instituicao}</h6>
                         <p class="card-text">{currentDivulgacao.descricao}</p>
-                        <Link to='/divulgacoes' class="card-link">Editar</Link>
+                        <Link to={`/divulgacoes/${currentDivulgacao._id}`} class="card-link">Editar</Link>
                         <button class="btn" onClick={()=>handleDelete(currentDivulgacao._id)}>Apagar</button>
                     </div>
             </div>
