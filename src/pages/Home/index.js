@@ -1,15 +1,17 @@
 import {Link} from 'react-router-dom'
 import axios from 'axios'
+import { Navbar } from '../../components/Navbar';
+import logo from "../../assets/img/Projeto_Maozinha.png"
+import './style.modules.css'
 
 export function Home(){
     
     return (
+
         <div className='homePage'>
-            <div className='navBar'>
-                <Link to="/cadastrodivulgacoes" className='btn btn-primary'>CADASTRO DIVULGAÇÕES</Link>
-                <Link to="/cadastropedido" className='btn btn-primary'>CADASTRO PEDIDOS</Link>
-                <Link to="/pedidos" className='btn btn-primary'>PEDIDOS</Link>
-                <Link to="/divulgacoes" className='btn btn-primary'>DIVULGAÇÕES</Link>
+            <Navbar/>
+            <div className="home-body">
+                <img src={logo} alt="Logo Projeto Mãozinha"/>
             </div>
         </div>
     );

@@ -1,21 +1,25 @@
 import { Link } from "react-router-dom";
 import './style.modules.css'
-
+import logoImg from "./../../assets/img/Projeto_Maozinha.png"
 export function Navbar() {
 return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-dark bg-dark">
     <h1>
-      <Link to="/" style={{ textDecoration: "none" }}>
-        {" "}
-        Projeto Mãozinha{" "}
+    <Link to="/" style={{ textDecoration: "none" }}>
+      <div style={{color:"white"}}>
+        <img src={logoImg} alt="Projeto Mãozinha" style={{width:"100px",height:"auto"}}/>
+        Home
+      </div>
       </Link>
     </h1>
-    <ul>
-    <li><Link to="/cadastrodivulgacoes">CADASTRO DIVULGAÇÕES</Link></li>
-    <li><Link to="/cadastropedido">CADASTRO PEDIDOS</Link></li>
-    <li><Link to="/pedidos">PEDIDOS</Link></li>
-    <li><Link to="/divulgacoes">DIVULGAÇÕES</Link></li>
-    </ul>
+    <div className="nav-items">
+      
+        <Link className="btn btn-outline-success m-2" to="/cadastrodivulgacoes">CADASTRO DIVULGAÇÕES</Link>
+        <Link className="btn btn-outline-success m-2" to="/cadastropedido">CADASTRO PEDIDOS</Link>
+        <Link className="btn btn-outline-success m-2" to="/pedidos">PEDIDOS</Link>
+        <Link className="btn btn-outline-success m-2" to="/divulgacoes">DIVULGAÇÕES</Link>
+      
+    </div>
   </nav>
 );
 }

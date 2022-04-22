@@ -20,7 +20,7 @@ export function EditDivulgacoes(){
     useEffect(() => {
         async function fetchEdit() {
             const response = await axios.get(
-           `https://ironrest.herokuapp.com/projetoMaozinha/${params.id}`      
+            `https://ironrest.herokuapp.com/projetoMaozinha/${params.id}`      
             );
             setForm({...response.data});
         }
@@ -38,7 +38,7 @@ function handleConfirm(event){
     const editObj = {...form};
 
     delete editObj._id;
-   
+
     axios.put(`https://ironrest.herokuapp.com/projetoMaozinha/${params.id}`, editObj);
     navigate("/");
 }
@@ -46,7 +46,7 @@ function handleConfirm(event){
     return (
         <>
         <Navbar />
-        <h1>CADASTRO DIVULGAÇÃO</h1>
+        <h1>EDITAR DIVULGAÇÃO</h1>
         <form onSubmit={handleConfirm}>
             <div class="mb-3">
                 <label for="tituloCadastro" class="form-label">Título:</label>
