@@ -24,6 +24,16 @@ export function Pedidos(){
          });
          setPedidos(filtrado);
     },[data]);
+
+    async function handleDelete(id) {
+        await axios.delete(
+        `https://ironrest.herokuapp.com/projetoMaozinha/${id}`
+        );
+        let deletado = pedidos.filter((obj) => {
+            return obj._id !== id 
+        });
+        setPedidos(deletado);
+    }
     
     return (
         <>
@@ -37,8 +47,8 @@ export function Pedidos(){
                       <h5 class="card-title">{currentPedidos.titulo}</h5>
                       <h6 class="card-subtitle mb-2 text-muted">{currentPedidos.nome_instituicao}</h6>
                         <p class="card-text">{currentPedidos.descricao}</p>
-                        <Link to='/' class="card-link">Editar</Link>
-                        <Link to='/' class="card-link">Apagar</Link>
+                        <Link to={`/pedidos/${currentPedidos._id}`} class="card-link">Editar</Link>
+                        <button class="btn" onClick={()=>handleDelete(currentPedidos._id)}>Apagar</button>
                     </div>
             </div>
                </>
