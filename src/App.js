@@ -1,8 +1,10 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import {Home} from './pages/Home'
-import {Cadastro} from './pages/Cadastro'
-import {Pedidos} from './pages/Pedidos'
-import {Divulgacoes} from './pages/Divulgacoes'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {Home} from './pages/Home';
+import {CadastroDivulgacoes} from './pages/CadastroDivulgacoes';
+import {CadastroPedido} from './pages/CadastroPedido';
+import {Pedidos} from './pages/Pedidos';
+import {Divulgacoes} from './pages/Divulgacoes';
+
 
 
 function App() {
@@ -11,7 +13,8 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/cadastro" element={<Cadastro/>}/>
+        <Route path="/cadastrodivulgacoes" element={<CadastroDivulgacoes/>}/>
+        <Route path="/cadastropedido" element={<CadastroPedido/>}/>
         <Route path="/pedidos" element={<Pedidos/>}/>
         <Route path="/divulgacoes" element={<Divulgacoes/>}/>
       </Routes>
