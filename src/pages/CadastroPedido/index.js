@@ -31,7 +31,8 @@ function handleConfirm(){
     return (
         <>
         <Navbar />
-        <h1>CADASTRO</h1>
+        <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
+        <h1>CADASTRO PEDIDO</h1>
         <form onSubmit={handleConfirm}>
             <div class="mb-3">
                 <label for="tituloCadastro" class="form-label">Título:</label>
@@ -102,6 +103,7 @@ function handleConfirm(){
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
+            </div>
         </>
 
     );

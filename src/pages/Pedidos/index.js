@@ -38,6 +38,7 @@ export function Pedidos(){
     return (
         <>
         <Navbar />
+        <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
         <h1>PEDIDOS</h1>
         {pedidos.map((currentPedidos) => {
            return (
@@ -54,6 +55,7 @@ export function Pedidos(){
                </>
            ) 
         })}
+        </div>
         </>
     );
 }

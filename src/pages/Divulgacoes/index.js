@@ -39,6 +39,7 @@ export function Divulgacoes(){
     return (
         <>
         <Navbar />
+        <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
         <h1>DIVULGAÇÕES</h1>
         {divulgacao.map((currentDivulgacao) => {
            return (
@@ -55,6 +56,7 @@ export function Divulgacoes(){
                </>
            ) 
         })}
+        </div>
         </>
     );
 }

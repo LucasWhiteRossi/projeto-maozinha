@@ -48,6 +48,7 @@ function handleConfirm(event){
     return (
         <>
         <Navbar />
+        <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
         <h1>EDITAR PEDIDO</h1>
         <form onSubmit={handleConfirm}>
             <div class="mb-3">
@@ -97,6 +98,7 @@ function handleConfirm(event){
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
+            </div>
         </>
 
     );
